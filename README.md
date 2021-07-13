@@ -1,4 +1,4 @@
-### Brutus A/S application
+# Brutus A/S application
 
 ## To run locally:
 
@@ -16,7 +16,7 @@ The page will reload if you make edits.<br/>
 You will also see any lint errors in the console.
 
 ## About the application
-It is a simple application that takes user input based on which person they want to find from the database. If no input is given, the entire database will be fetched and printed out in the table (this will take TIME, as it is quite large). The input needs to be specific, whether you're looking for names, age etc.
+It is a simple application that takes user input based on which person they want to find from the database. If no input is given, the entire database will be fetched and printed out in the table (this will take TIME, as it is quite large). The input needs to be specific, whether you're looking for names, age etc. By clicking on the header names of the table, you can sort (by the type you click).
 
 ## Technology used
 The application consists of a MongoDB database (NoSQL), Spring Boot backend (Java) and React.js (JavaScript/HTML) on the frontend.<br/>
