@@ -50,6 +50,136 @@ export class ListOfPeople extends React.Component {
         this.setState({people: fetchPeople, loading:false});
     }
 
+    sortFirstName(people) {
+        function compare(a, b) {
+            if( a.firstname < b.firstname) {
+                return -1;
+            }
+            if ( a.firstname > b.firstname) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortLastName(people) {
+        function compare(a, b) {
+            if( a.lastname < b.lastname) {
+                return -1;
+            }
+            if ( a.lastname > b.lastname) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortSeq(people) {
+        function compare(a, b) {
+            if( parseInt(a.seq) < parseInt(b.seq)) {
+                return -1;
+            }
+            if ( parseInt(a.seq) > parseInt(b.seq)) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortAge(people) {
+        function compare(a, b) {
+            if( parseInt(a.age) < parseInt(b.age)) {
+                return -1;
+            }
+            if ( parseInt(a.age) > parseInt(b.age)) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortStreet(people) {
+        function compare(a, b) {
+            if( a.street < b.street) {
+                return -1;
+            }
+            if ( a.street > b.street) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortCity(people) {
+        function compare(a, b) {
+            if( a.city < b.city) {
+                return -1;
+            }
+            if ( a.city > b.city) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortState(people) {
+        function compare(a, b) {
+            if( a.state < b.state) {
+                return -1;
+            }
+            if ( a.state > b.state) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortLatitude(people) {
+        function compare(a, b) {
+            if( parseFloat(a.latitude) < parseFloat(b.latitude)) {
+                return -1;
+            }
+            if ( parseFloat(a.latitude) > parseFloat(b.latitude)) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortLongitude(people) {
+        function compare(a, b) {
+            if( parseFloat(a.longitude) < parseFloat(b.longitude)) {
+                return -1;
+            }
+            if ( parseFloat(a.longitude) > parseFloat(b.longitude)) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
+    sortCCNumber(people) {
+        function compare(a, b) {
+            if( parseInt(a.ccnumber) < parseInt(b.ccnumber)) {
+                return -1;
+            }
+            if ( parseInt(a.ccnumber) > parseInt(b.ccnumber)) {
+                return 1;
+            }
+            return 0;
+        }
+        return people.sort(compare)
+    }
+
     //Currently doesnt work. Just removes the person from the view, but its still in the database, and will show if the page is being refreshed.
     confirmDeletePerson(toDelete) {
         if(window.confirm("Vil du slette denne personen?")) {
@@ -77,16 +207,16 @@ export class ListOfPeople extends React.Component {
             <table className='table table-striped' aria-labelledby="tabelLabel">
               <thead>
                 <tr>
-                  <th>Seq</th>
-                  <th>Fornavn</th>
-                  <th>Etternavn</th>
-                  <th>Alder</th>
-                  <th>Gate</th>
-                  <th>By</th>
-                  <th>Stat</th>
-                  <th>Breddegrad</th>
-                  <th>Lengdegrad</th>
-                  <th>CC-nummer</th>
+                  <th onClick={() => this.setState(this.sortSeq(people))}>Seq</th>
+                  <th onClick={() => this.setState(this.sortFirstName(people))}>Fornavn</th>
+                  <th onClick={() => this.setState(this.sortLastName(people))}>Etternavn</th>
+                  <th onClick={() => this.setState(this.sortAge(people))}>Alder</th>
+                  <th onClick={() => this.setState(this.sortStreet(people))}>Gate</th>
+                  <th onClick={() => this.setState(this.sortCity(people))}>By</th>
+                  <th onClick={() => this.setState(this.sortState(people))}>Stat</th>
+                  <th onClick={() => this.setState(this.sortLatitude(people))}>Breddegrad</th>
+                  <th onClick={() => this.setState(this.sortLongitude(people))}>Lengdegrad</th>
+                  <th onClick={() => this.setState(this.sortCCNumber(people))}>CC-nummer</th>
                   <th></th>
                 </tr>
               </thead>
