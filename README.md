@@ -20,8 +20,9 @@ It is a simple application that takes user input based on which person they want
 
 ## Technology used
 The application consists of a MongoDB database (NoSQL), Spring Boot backend (Java) and React.js (JavaScript/HTML) on the frontend.
-Postman was used to test the API with HTTP-requests.
+Maven was also used.
 Bootstrap was the main way of styling the site, with a little bit of extra CSS as well.
+Postman was used to test the API with HTTP-requests.
 
 ## Further development
 Some improvements could be made.
