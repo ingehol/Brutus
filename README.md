@@ -29,4 +29,4 @@ Some improvements could be made.<br/>
 -Make delete button work as intended.<br/>
 -Possibility to add/edit people.<br/>
 -More statistics (as asked for).<br/>
--Make it possible to search for a range age, instead of specific age.
+-Make it possible to search for a age range, instead of specific age.
