@@ -29,4 +29,3 @@ Some improvements could be made.
 -Make delete button work as intended.
 -Possibility to add/edit people.
 -More statistics (as asked for).
--More user friendly sorting.
